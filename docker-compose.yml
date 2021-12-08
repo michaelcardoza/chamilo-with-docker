@@ -9,7 +9,7 @@ services:
       - "./config/php.ini:/usr/local/etc/php/conf.d/uploads.ini"
       - "./chamilo:/var/www/html"
     ports:
-      - "8080:80"
+      - "80:80"
     depends_on:
       - db
 
