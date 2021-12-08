@@ -23,13 +23,9 @@ RUN set -ex; \
         libssl-dev \
         openssl \
         libldap2-dev
-	; \
-	\
-	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
-    rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/
+    && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ \
     && docker-php-ext-configure intl \
     && docker-php-ext-install -j "$(nproc)" \
         bcmath \
