@@ -1,0 +1,13 @@
+.DS_Store
+*.log
+
+.idea/
+
+*.orig
+nbproject/*
+
+vendor/
+web/
+node_modules
+*.lock
+.env
